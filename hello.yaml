@@ -10,4 +10,4 @@ spec:
     path: '/niture/hello.yaml'
   destination:
     server: 'https://kubernetes.default.svc'
-    namespace: default
+    namespace: hellok
