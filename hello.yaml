@@ -1,13 +1,13 @@
 apiVersion: argoproj.io/v1alpha1
 kind: Application
 metadata:
-  name: hello-kubernetes
+  name: hello
 spec:
   project: default
   source:
     repoURL: 'https://github.com/herpriz2/niture.git'
     targetRevision: HEAD
-    path: '/niture/hello.yaml'
+    path: 'niture'
   destination:
     server: 'https://kubernetes.default.svc'
-    namespace: hellok
+    namespace: hello
