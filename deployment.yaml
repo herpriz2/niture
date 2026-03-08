@@ -1,0 +1,32 @@
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: hello-argo
+spec:
+  replicas: 2
+  selector:
+    matchLabels:
+      app: hello-argo
+  template:
+    metadata:
+      labels:
+        app: hello-argo
+    spec:
+      containers:
+      - name: web
+        image: nginx:1.25
+        ports:
+        - containerPort:80
+---
+apiVersion: v1
+kind: service
+metadata:
+  name: hello-argo-service
+  namespace: test-space
+spec:
+  selector:
+    app: hello-argo
+  ports:
+    - protocol: TCP
+      port: 80
+      targetport: 80
