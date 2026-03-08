@@ -7,7 +7,7 @@ spec:
   source:
     repoURL: 'https://github.com/herpriz2/niture.git'
     targetRevision: HEAD
-    path: '/niture/hello.yaml
+    path: '/niture/hello.yaml'
   destination:
     server: 'https://kubernetes.default.svc'
     namespace: default
